@@ -32,15 +32,16 @@
                     //}
 
                     function quickNotes_btn_Click(quickNotes_type = "null") {
+                        var copyText;
                         /* Get the correct text field */
                         if (quickNotes_type == "oApproval") {
-                            var copyText = "Forwarded to 'O' for Approval.  Eligible per POCT";
+                            copyText = "Forwarded to 'O' for Approval.  Eligible per POCT";
                         }
                         else if (quickNotes_type == "mgrReview") {
-                            var copyText = "This account is pending Manager Review.  Review again in 7 days.";
+                            copyText = "This account is pending Manager Review.  Review again in 7 days.";
                         }
                         else if (quickNotes_type == "dummy") {
-                            var copyText = "Just couldn't resist could you?";
+                            copyText = "Just couldn't resist could you?";
                         }
 
                         /* Select the text field */
@@ -51,7 +52,8 @@
                         navigator.clipboard.writeText(copyText.value);
 
                         /* Alert the copied text */
-                        alert("Copied the text: " + copyText.value);
+                        //alert("Copied the text: " + copyText.value);
+                        var oAlert = radAlert("Copied the text: " + copyText.value)
                     }
 
                     function copy_btn_click() {
@@ -102,7 +104,147 @@
                             ;
 
                         if (txtAcct == "") {
-                            M
+                            var oAlert = radAlert("You're missing an account number for your documentation. Please return to Commentary and input this required information before continuing");
+                        }
+
+                        if (chkPend == true) {
+                            Pend = " Pending Financial. ";
+                        }
+                        else {
+                            Pend = "";
+                        }
+
+                        if (chkUnworked == true) {
+                            Unworked = " Unworked. ";
+                        }
+                        else {
+                            Unworked = "";
+                        }
+
+                        if (chkRec == true) {
+                            Rec = " Recovery. ";
+                        }
+                        else {
+                            Rec = "";
+                        }
+
+                        if (chkWO == true) {
+                            WO = " Write-Off. ";
+                        }
+                        else {
+                            WO = "";
+                        }
+
+                        if (txtAcct != "") {
+                            Acct = "Acct# ".concat(txtAcct);
+                        }
+                        else {
+                            Acct = "";
+                        }
+
+                        if (txtIplan != "") {
+                            Iplan = txtIplan.concat(" ");
+                        }
+                        else {
+                            Iplan = "";
+                        }
+
+                        if (cmbPos != "") {
+                            Pos = " ".concat(cmbPos, " iplan of ");
+                        }
+                        else {
+                            Pos = ""
+                        }
+
+                        if (txtExpec != "") {
+                            Expec = " with an expected reimbursement of $".concat(txtExpec)
+                        }
+                        else {
+                            Expec = ""
+                        }
+
+                        if (txtPR != "") {
+                            PR = " and a PR of $".concat(txtPR)
+                        }
+                        else {
+
+                        }
+                        // TO-DO: Pick back up where I left off here
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
+                        }
+
+                        if () {
+
+                        }
+                        else {
+
                         }
 
                     }
